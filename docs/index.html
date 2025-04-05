@@ -1,23 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo com Imagem e Iframe</title>
+  <title>Meu Site com Iframe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+    }
+    nav button {
+      margin: 0 5px;
+      padding: 10px 15px;
+      color: white;
+      background: #444;
+      border: none;
+      cursor: pointer;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0;">
+<body>
 
-  <!-- Imagem -->
-  <img src="https://images.steamusercontent.com/ugc/89345971217665745/BBDD3A56734A0B3DB16768125E2CBCD9DB625F16/?imw=5000&amp;imh=5000&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=false" 
-       style="width: 100%; height: auto;" 
-       alt="DOOM Gif">
+  <nav>
+    <button onclick="carregar('https://example.com')">Exemplo</button>
+    <button onclick="carregar('https://www.wikipedia.org')">Wikipedia</button>
+    <button onclick="carregar('https://pt.stackoverflow.com')">StackOverflow</button>
+  </nav>
 
-  <!-- Iframe funcional -->
-  <iframe src="https://dnschecker.org/" 
-          width="100%" 
-          height="600" 
-          frameborder="0"
-          style="display: block;"></iframe>
+  <iframe id="meuIframe" src=""></iframe>
+
+  <script>
+    function carregar(url) {
+      document.getElementById('meuIframe').src = url;
+    }
+  </script>
 
 </body>
 </html>
