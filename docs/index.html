@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Site com Iframe</title>
-  <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'none';
-               style-src 'self' data: outrosite.com;
-               script-src 'self' blob: data: outrosite.com;"
-/>
   <style>
     body {
       margin: 0;
@@ -46,11 +40,7 @@
 
   <script>
     function carregar(url) {
-      //document.getElementById('meuIframe').src = url;
-
-      document.getElementById('meuIframe').contentWindow.location.href = url;
-
-
+      document.getElementById('meuIframe').src = url;
     }
   </script>
 
