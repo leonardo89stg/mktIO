@@ -33,14 +33,17 @@
   <nav>
     <button onclick="carregar('https://example.com')">Exemplo</button>
     <button onclick="carregar('https://www.wikipedia.org')">Wikipedia</button>
-    <button onclick="carregar('https://www.stackoverflow.com')">StackOverflow</button>
+    <button onclick="carregar('https://pt.stackoverflow.com')">StackOverflow</button>
   </nav>
 
   <iframe id="meuIframe" src=""></iframe>
 
   <script>
     function carregar(url) {
-      document.getElementById('meuIframe').src = url;
+      //document.getElementById('meuIframe').src = url;
+
+      document.getElementById('meuIframe').location.href = url; 
+
     }
   </script>
 
