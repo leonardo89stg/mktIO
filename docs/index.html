@@ -42,7 +42,8 @@
     function carregar(url) {
       //document.getElementById('meuIframe').src = url;
 
-      document.getElementById('meuIframe').location.href = url; 
+      document.getElementById('meuIframe').contentWindow.location.href = url;
+
 
     }
   </script>
